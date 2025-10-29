@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chaotic Birthday Letter</title>
+<style>
+  body {
+    text-align: center;
+    background: linear-gradient(to bottom, #64b5f6, #bbdefb);
+    font-family: "Comic Sans MS", cursive;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 40px;
+    color: #1565c0;
+    margin-top: 30px;
+  }
+
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .photos img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: transform 0.3s;
+  }
+
+  .photos img:hover {
+    transform: scale(1.1);
+  }
+
+  .letter {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+  }
+
+  .letter p {
+    font-size: 18px;
+    color: #0d47a1;
+  }
+
+  .music-btn {
+    background: linear-gradient(to right, #2196f3, #64b5f6);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: 0.3s;
+  }
+
+  .music-btn:hover {
+    background: linear-gradient(to right, #1976d2, #42a5f5);
+  }
+</style>
+</head>
+
+<body>
+  <h1>🎉 Happy Birthday, Okuls! 🎂</h1>
+
+  <div class="letter">
+    <p>🎉 Wishing you a birthday so epic, Mabuhay ka hanggat gusto mo okuls!<br>
+    SALAMAT sa pagiging kaibigan boi! Love you (as a friend JAHAHAHAH eme) 💙</p>
+  </div>
+
+  <button class="music-btn" onclick="toggleMusic()">click to exit</button>
+
+  <div class="photos">
+    <img src="pic1.jpeg" alt="photo 1">
+    <img src="pic2.jpeg" alt="photo 2">
+    <img src="pic3.jpeg" alt="photo 3">
+    <img src="pic4.jpeg" alt="photo 4">
+    <img src="pic5.jpeg" alt="photo 5">
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="jermiah.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+<script>
+  function toggleMusic() {
+    const music = document.getElementById("bgMusic");
+    const btn = document.querySelector(".music-btn");
+
+    if (music.paused) {
+      music.play();
+      btn.textContent = "⏸️exit";
+    } else {
+      music.pause();
+      btn.textContent = "click to exit";
+    }
+  }
+</script>
+
+</body>
+</html>
